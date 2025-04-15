@@ -1,0 +1,68 @@
+#simple soap service
+
+package pkg1;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+/**
+ *
+ * @author HP
+ */
+@WebService(serviceName = "operation")
+public class operation {
+
+    /**
+     * This is a sample web service operation
+     */
+   
+    /**
+     * Web service operation
+     * @param n1
+     * @param n2
+     * @return 
+     */
+    @WebMethod(operationName = "addition")
+    public int addition(@WebParam(name = "n1") int n1, @WebParam(name = "n2") int n2) {
+        //TODO write your implementation code here:
+        int sum=n1+n2;
+        return sum;
+        
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "substraction")
+    public int substraction(@WebParam(name = "n1") int n1, @WebParam(name = "n2") int n2) {
+        //TODO write your implementation code here:
+        int sub=n1-n2;
+        return sub;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "multiplication")
+    public int multiplication(@WebParam(name = "n1") int n1, @WebParam(name = "n2") int n2) {
+        //TODO write your implementation code here:
+        int multiply=n1*n2;
+        return multiply;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "division")
+    public int division(@WebParam(name = "n1") int n1, @WebParam(name = "n2") int n2) {
+        //TODO write your implementation code here:
+       int div=n1/n2;
+        return div;
+    }
+
+    /**
+     * Web service operation
+     */
+    
+}
