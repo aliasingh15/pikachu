@@ -1,0 +1,31 @@
+#addition of three number Soap service
+package pkg1;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+/**
+ *
+ * @author HP
+ */
+@WebService(serviceName = "newswrvice")
+public class newswrvice {
+
+    /**
+     * This is a sample web service operation
+     */
+    
+    /**
+     * Web service operation
+     * @param a
+     * @param b
+     * @param c
+     * @return 
+     */
+    @WebMethod(operationName = "addition")
+    public int addition(@WebParam(name = "a") int a, @WebParam(name = "b") int b, @WebParam(name = "c") int c) {
+        int sum=a+b+c;
+        return sum;
+    }
+}
