@@ -1,0 +1,30 @@
+#create simple Soap service for Square
+
+package pkg1;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+/**
+ *
+ * @author HP
+ */
+@WebService(serviceName = "squareservice")
+public class squareservice {
+
+    /**
+     * This is a sample web service operation
+     */
+   
+    /**
+     * Web service operation
+     * @param n1
+     * @return 
+     */
+    @WebMethod(operationName = "square")
+    public int square(@WebParam(name = "n1") int n1) {
+        int square=n1*n1;
+        return square;
+    }
+}
