@@ -1,0 +1,22 @@
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+@WebService(serviceName = "FactorialService", targetNamespace = "http://my.org/ns/")
+public class FactorialService {
+
+    // ✅ This is the method exposed as a SOAP web service operation
+    @WebMethod(operationName = "factorial")
+    public long factorial(@WebParam(name = "a") long a) {
+        if (a < 0) {
+            throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
+        }
+
+        long result = 1;
+        for (long i = 2; i <= a; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+}
