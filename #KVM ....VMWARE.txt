@@ -1,0 +1,13 @@
+#KVM ....VMWARE
+
+➢ sudo apt-get update 
+➢ sudo grep -c “svm\|vmx”/proc/cpuinfo 
+➢ cat /proc/cpuinfo 
+➢ sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager 
+➢ sudo adduser ashwin1 
+➢ sudo adduser ashwin1 libvirtd 
+➢ sudo virsh -c qemu:///system list 
+➢ sudo virt-manager 
+
+
+This will open the Virtual Machine Manager window. 
